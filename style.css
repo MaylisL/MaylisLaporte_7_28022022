@@ -225,7 +225,7 @@ a {
     overflow: hidden;
     text-overflow: ellipsis;*/
 }
-@media screen and  {min-width: 1441px}
+@media screen and  (min-width: 1441px) {
 main {
     margin: auto;
 }   
