@@ -1,0 +1,232 @@
+main, header {
+    max-width: 1440px;
+    
+    margin-inline: 100px;
+}
+h2 {
+    margin: 0;
+}
+a {
+   text-decoration: none;
+}
+.nav-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 268px;
+    height: 93px;
+    margin-inline: auto;
+    margin-top: 42px;
+    margin-bottom: 17px;
+}
+.logo-title {
+    color: #D04F4F;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    font-style: normal;
+    margin-top: 0;
+    
+}
+.search-input {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 20px;
+}
+#search-input, .button-search {
+    height: 69px;
+    border: none;
+    border-radius: 5px;
+    background-color: #E7E7E7;
+}
+#search-input {
+    width: 100%;
+    padding-left: 24px;
+}
+.button-search {
+    position: absolute;
+    right: 16px;
+    padding-block: 0;
+    height: 67px;
+}
+.selected-filters {
+    display: flex;
+    justify-content: space-between;
+    display:none;
+}
+.tags {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 13px;
+    height: 37px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    background-color: #3282F7;
+    padding-inline: 20px;
+    margin-bottom: 15px;
+}
+.filters-buttons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+}
+.dropdown-buttons {
+    display: flex;
+    position: relative;  
+}
+.buttons-style {
+    width: 170px;
+    height: 69px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    z-index: 2;
+    padding-right: 18px;
+}
+.button-ingredients, .container-ingredients, .input-button-ingredients {
+    background-color: #3282F7;
+}
+.button-appliances, .container-appliances, .input-button-appliances {
+    background-color: #68D9A4;
+}
+.button-utensils, .container-ustensils, .input-button-utensils {
+    background-color: #ED6454;
+}
+.button-name {
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-left: 15px;
+}
+.container-filters {
+    display: flex;
+    flex-direction: column;
+    min-width: 223px;
+    max-height: 397px;
+    border: hidden;
+    border-radius: 5px;
+    position: relative;
+    padding-left: 19px;
+    padding-right: 28px;
+}
+.input-wrapper {
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;  
+    padding-top: 22px;
+}
+.input-button {
+    text-decoration: none;
+    border: none;
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    color: white;
+}
+.input-button::placeholder {
+    color: white;
+    opacity: 50%;
+}
+.input-button:focus-visible {
+    outline: none;
+}
+
+.choices-wrapper {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(3, 223px);
+}
+.hide {
+    display: none;
+}
+.search-icon {
+    vertical-align: middle;
+}
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    row-gap: 50px;
+    padding-top: 10px;
+    padding-bottom: 20px; 
+}
+.card {
+    background-color: #E7E7E7;
+    border-radius: 5px;
+    width: 380px;
+    height: 364px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: hidden;
+    
+}
+.card-image {
+    background-color: #C7BEBE;
+    height: 178px;
+    width: 380px;
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding-inline: 20px;
+    height: 186px;
+}
+.card-info {
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'Lato', sans-serif;
+    padding-top: 20px;
+}
+.card-title {
+    margin-right: auto;
+    font-weight: 400;
+    font-size: 18px;
+}
+.card-time {
+    font-weight: 700;
+    font-size: 18px;
+    margin-block: 0;
+}
+.card-description {
+    display: flex;
+    justify-content: space-between;
+}
+.card-ingredients {
+   width: 44%;
+   font-family: 'Lato', sans-serif;
+   font-size: 12px;
+   font-weight: 700;
+   /*white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;*/
+}
+.card-instructions {
+    width: 44%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    text-align: left;
+    /*white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;*/
+}
+@media screen and  {min-width: 1441px}
+main {
+    margin: auto;
+}   
+}
