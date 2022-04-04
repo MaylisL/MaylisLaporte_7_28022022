@@ -1,5 +1,3 @@
-import {recipes} from './recipes.js'
-
 const containerTag = document.querySelector('.selected-filters');
 // array of active tags in order to keep track of active filters (for future results displayed)
 let ingredientsActiveTags = [];
@@ -385,7 +383,10 @@ function filterByUtensils(choice){
 function displayAvailableRecipes(){
     // remove all the cards before the new result
     recipeListContainer.innerHTML=""
-    if(availableListOfRecipes.lengh<1){
+    if(availableListOfRecipes.length<1){
+        const p = document.createElement('p');
+        p.textContent = "Aucune recette ne correspond à votre critère... vous pouvez chercher « tarte aux pommes », « poisson », etc."
+        recipeListContainer.appendChild(p);
     } else {// if there are available filters = give the new available recipe
         availableListOfRecipes.forEach((recipe)=>{
             recipeListContainer.appendChild(recipe.createRecipeCard())
