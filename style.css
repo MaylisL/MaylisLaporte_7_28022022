@@ -9,6 +9,9 @@ h2 {
 a {
    text-decoration: none;
 }
+.cursorPointer {
+    cursor: pointer;
+}
 .nav-logo {
     display: flex;
     flex-direction: column;
@@ -55,8 +58,10 @@ a {
 }
 .selected-filters {
     display: flex;
-    justify-content: space-between;
-    display:none;
+    justify-content: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    
 }
 .tags {
     display: flex;
@@ -77,7 +82,8 @@ a {
 .filters-buttons {
     display: flex;
     justify-content: flex-start;
-    gap: 20px;
+    column-gap: 20px;
+    flex-wrap: wrap;
 }
 .dropdown-buttons {
     display: flex;
@@ -96,13 +102,13 @@ a {
     z-index: 2;
     padding-right: 18px;
 }
-.button-ingredients, .container-ingredients, .input-button-ingredients {
+.button-ingredients, .container-ingredients, .input-button-ingredients, .tag-ingredients {
     background-color: #3282F7;
 }
-.button-appliances, .container-appliances, .input-button-appliances {
+.button-appliances, .container-appliances, .input-button-appliances, .tag-appliances {
     background-color: #68D9A4;
 }
-.button-utensils, .container-ustensils, .input-button-utensils {
+.button-utensils, .container-utensils, .input-button-utensils, .tag-utensils {
     background-color: #ED6454;
 }
 .button-name {
@@ -122,6 +128,7 @@ a {
     position: relative;
     padding-left: 19px;
     padding-right: 28px;
+    overflow-y: scroll
 }
 .input-wrapper {
     padding: 0;
@@ -149,6 +156,10 @@ a {
     display: grid;
     grid-auto-flow: row;
     grid-template-columns: repeat(3, 223px);
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    color: white;
+    font-weight: 400;
 }
 .hide {
     display: none;
@@ -187,17 +198,20 @@ a {
     gap: 0;
     padding-inline: 20px;
     height: 186px;
+    color: #000000;
 }
 .card-info {
     display: flex;
     justify-content: flex-end;
     font-family: 'Lato', sans-serif;
     padding-top: 20px;
+    align-items: flex-start;
 }
 .card-title {
     margin-right: auto;
     font-weight: 400;
     font-size: 18px;
+    max-width: 74%;
 }
 .card-time {
     font-weight: 700;
@@ -209,13 +223,16 @@ a {
     justify-content: space-between;
 }
 .card-ingredients {
-   width: 44%;
    font-family: 'Lato', sans-serif;
    font-size: 12px;
-   font-weight: 700;
-   /*white-space: nowrap;
-   overflow: hidden;
-   text-overflow: ellipsis;*/
+   list-style-type: none;
+   padding-inline-start: 0;
+}
+.bold {
+    font-weight: 700;
+}
+.card-ingredients-item { 
+    text-decoration: none;
 }
 .card-instructions {
     width: 44%;
@@ -227,7 +244,10 @@ a {
     text-overflow: ellipsis;*/
 }
 @media screen and  (min-width: 1441px) {
-main {
-    margin: auto;
-}   
+    main {
+        margin: auto;
+    }
+    body {
+        margin: auto;
+    }   
 }
