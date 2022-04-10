@@ -1,7 +1,9 @@
-main, header {
-    max-width: 1440px;
-    
+body {
+    max-width: 1440px;  
     margin-inline: 100px;
+}
+main, header {
+    width: 100%;
 }
 h2 {
     margin: 0;
@@ -9,6 +11,12 @@ h2 {
 a {
    text-decoration: none;
 }
+/* clears the 'X' from Chrome input  type search */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
 .cursorPointer {
     cursor: pointer;
 }
@@ -84,6 +92,7 @@ a {
     justify-content: flex-start;
     column-gap: 20px;
     flex-wrap: wrap;
+    position: absolute;
 }
 .dropdown-buttons {
     display: flex;
@@ -171,10 +180,11 @@ a {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
-    row-gap: 50px;
+    justify-content: flex-start;
+    gap: 50px;
     padding-top: 10px;
     padding-bottom: 20px; 
+    margin-top: 100px;
 }
 .card {
     background-color: #E7E7E7;
@@ -211,12 +221,15 @@ a {
     margin-right: auto;
     font-weight: 400;
     font-size: 18px;
-    max-width: 74%;
+    max-width: 72%;
 }
 .card-time {
     font-weight: 700;
     font-size: 18px;
     margin-block: 0;
+}
+.time-icon {
+    margin-right: 7px;
 }
 .card-description {
     display: flex;
@@ -244,10 +257,64 @@ a {
     text-overflow: ellipsis;*/
 }
 @media screen and  (min-width: 1441px) {
-    main {
-        margin: auto;
-    }
     body {
         margin: auto;
     }   
+    .cards-container {
+        justify-content: space-between;
+    }
+}
+@media screen and  (max-width: 1024px) {
+    .cards-container {
+        justify-content: center;
+    }
+    .choices-wrapper {
+        grid-template-columns: repeat(2, 223px);
+    }
+}
+@media screen and  (max-width: 768px) {
+    body {
+        margin: 50px;
+    } 
+    .filters-buttons {
+        position: relative;
+    } 
+    .cards-container {
+        margin-top: 0;
+    }
+}
+@media screen and  (max-width: 500px) {
+    body {
+        margin: 25px;
+    }  
+}
+@media screen and  (max-width: 375px) {
+    body {
+        margin: 10px;
+    }  
+    .choices-wrapper {
+        grid-template-columns: repeat(1, 223px);
+    }
+    .card {
+        width: 100%;
+        height: unset;
+    }
+    .card-body {
+        height: unset;
+    }
+    .card-image {
+        width: 100%;
+    }
+    .card-info {
+        justify-content: space-evenly;
+    }
+    .card-title {
+        margin: 0;
+    }
+    .card-description {
+        flex-direction: column;
+    }
+    .card-instructions {
+        width: 100%;
+    }
 }

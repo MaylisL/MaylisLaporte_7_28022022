@@ -132,7 +132,7 @@ class Recipe {
 
         const cardInstructions = document.createElement('p');
         cardInstructions.classList.add('card-instructions','card-text');
-        cardInstructions.textContent=this.description.substr(0, 195) + ' ...';
+        cardInstructions.textContent=this.description.substr(0, 181) + ' ...';
 
         cardDescription.appendChild(cardIngredients);
         cardDescription.appendChild(cardInstructions);
