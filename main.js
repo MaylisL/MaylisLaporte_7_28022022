@@ -101,7 +101,7 @@ class Recipe {
         
         const icon = document.createElement('img');
         icon.classList.add('time-icon');
-        icon.setAttribute('src', "/images/svg/time.svg");
+        icon.setAttribute('src', "images/svg/time.svg");
         icon.setAttribute('alt', "");
         
         const cardTime = document.createElement('p');
@@ -279,7 +279,7 @@ function availableFilters(list, typeOfFilter) {
             pTag.textContent = choice;
 
             const imgTag = document.createElement('img');
-            imgTag.setAttribute('src', '/images/svg/delete.svg');
+            imgTag.setAttribute('src', 'images/svg/delete.svg');
             imgTag.setAttribute('alt', 'clik to delete filter');
             imgTag.classList.add('cursorPointer')
 
